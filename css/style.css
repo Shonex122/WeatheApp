@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #00feba, #5b548a);
+}
+#weatherApp {
+  margin: auto;
+  width: 350px;
+  height: auto;
+  text-align: center;
+  justify-content: center;
+}
+
+#weatherApp h1 {
+  margin-top: 20px;
+  font-weight: 700;
+}
+
+.search {
+  width: 100%;
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search button {
+  border: none;
+  outline: none;
+  background: #fff;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.search button img {
+  width: 35px;
+}
+
+#location-input {
+  padding: 10px 25px;
+  border: none;
+  border-radius: 30px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  outline: none;
+  margin-bottom: 20px;
+  flex: 1;
+  height: 45px;
+  caret-color: blue;
+}
+
+#weather-data {
+  margin: 0 auto;
+  padding: 25px;
+  width: 300px;
+  border-radius: 5px;
+}
+
+.weather-type {
+  width: 100%;
+  margin-top: 100px;
+  justify-content: center;
+  text-align: center;
+}
+
+.weather-type img {
+  width: 200px;
+}
