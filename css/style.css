@@ -78,3 +78,30 @@ body {
 .weather-type img {
   width: 200px;
 }
+
+button {
+  border: none;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+#info {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#Sun,
+#Rain {
+  margin-top: 20px;
+  padding: 8px 20px 8px 20px;
+  border-radius: 10px;
+}
+
+h5 {
+  color: red;
+  font-weight: 400;
+  font-size: 18px;
+}

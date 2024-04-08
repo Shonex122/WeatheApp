@@ -1,5 +1,52 @@
 const searchBox = document.querySelector(".search input");
 const searchBtn = document.querySelector(".search button");
+let searchInfo = document.getElementById("searchInfo");
+let Rain = document.getElementById("Rain");
+let Sun = document.getElementById("Sun");
+
+// searchInfo.innerHTML =
+//   "<button onclick='upDate()'> Click here for Info </button>";
+
+Rain.innerHTML = "<button onclick='onRain()'> it's Raining ...</button>";
+function onRain() {
+  Rain.innerHTML += "<h5> Grab Your Umbrella &#9748 </h5>";
+  if (!Rain.disabled) {
+    Rain.disabled = true;
+    Rain.innerHTML = "Processing....";
+    Rain.remove += "";
+    setTimeout(function () {
+      Rain.disabled = false;
+      Rain.innerHTML = "";
+      Rain.innerHTML += "<h5> Grab Your Umbrella &#9748 </h5>";
+    }, 1000);
+  }
+}
+
+Sun.innerHTML = "<button onclick=' onTime()'> it's Sunny... </button>";
+function onTime() {
+  Sun.innerHTML += "<h5> Grab Your Umbrella &#9748 </h5>";
+  if (!Sun.disabled) {
+    Sun.disabled = true;
+    Sun.innerHTML = "Processing....";
+    Sun.remove += "";
+    setTimeout(function () {
+      Sun.disabled = false;
+      Sun.innerHTML = "";
+      Sun.innerHTML += "<h5> Wear Your Sunglasses. &#128526 </h5>";
+    }, 1000);
+  }
+}
+
+// function upDate() {
+//   let weather = prompt("how is the weather?");
+//   if (weather == "Raining") {
+//     searchInfo.innerHTML += "<h1> Grab your umbrella </h1>";
+//   } else if (weather == "Sunny") {
+//     searchInfo.innerHTML += "<h1> wear your sunglasses </h1>";
+//   } else {
+//     searchInfo.innerHTML += "<h1> Stay Home!</h1>";
+//   }
+// }
 
 searchBtn.addEventListener("click", () => {
   getWeatherData(searchBox.value);
