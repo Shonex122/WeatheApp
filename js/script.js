@@ -1,11 +1,8 @@
 const searchBox = document.querySelector(".search input");
 const searchBtn = document.querySelector(".search button");
-let searchInfo = document.getElementById("searchInfo");
+const searchInfo = document.getElementById("Refresh");
 let Rain = document.getElementById("Rain");
 let Sun = document.getElementById("Sun");
-
-// searchInfo.innerHTML =
-//   "<button onclick='upDate()'> Click here for Info </button>";
 
 Rain.innerHTML = "<button onclick='onRain()'> it's Raining ...</button>";
 function onRain() {
@@ -28,7 +25,7 @@ function onTime() {
   if (!Sun.disabled) {
     Sun.disabled = true;
     Sun.innerHTML = "Processing....";
-    Sun.remove += "";
+    Sun.remove += "refresh";
     setTimeout(function () {
       Sun.disabled = false;
       Sun.innerHTML = "";
@@ -37,16 +34,9 @@ function onTime() {
   }
 }
 
-// function upDate() {
-//   let weather = prompt("how is the weather?");
-//   if (weather == "Raining") {
-//     searchInfo.innerHTML += "<h1> Grab your umbrella </h1>";
-//   } else if (weather == "Sunny") {
-//     searchInfo.innerHTML += "<h1> wear your sunglasses </h1>";
-//   } else {
-//     searchInfo.innerHTML += "<h1> Stay Home!</h1>";
-//   }
-// }
+searchInfo.addEventListener("click", function () {
+  window.location.reload();
+});
 
 searchBtn.addEventListener("click", () => {
   getWeatherData(searchBox.value);
